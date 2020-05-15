@@ -2,7 +2,7 @@
 try{
 Do {
 $task = (Read-Host "Enter a number from 1-4 or enter 5 to quit.");
- 
+
  switch ($task) {
     1 {Get-ChildItem $PSScriptRoot -Filter *.log | Out-File -FilePath $PSScriptRoot\DailyLog.txt -Append; break} #Finds .log files in the same directory as the script and appends them to DailyLog.txt
        2 {Get-ChildItem $PSScriptRoot | Sort-Object Name | Format-Table | Out-File $PSScriptRoot\C916contents.txt -Append ; break}# Lists all files in the same directory as the script, formats to tabular format in alphabetical order ascending and appends to C916contents.txt
@@ -16,3 +16,4 @@ $task = (Read-Host "Enter a number from 1-4 or enter 5 to quit.");
 catch [System.OutOfMemoryException] {
     Write-Host "A system out of memory exception occured."# Catches system out of memory error
     }
+#test commit changes
