@@ -16,4 +16,3 @@ $task = (Read-Host "Enter a number from 1-4 or enter 5 to quit.");
 catch [System.OutOfMemoryException] {
     Write-Host "A system out of memory exception occured."# Catches system out of memory error
     }
-#test commit changes
